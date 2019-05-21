@@ -1,0 +1,94 @@
+/* moderni box model */
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+/* základní styly */
+body {
+  min-height: 100vh;
+  font-family: 'Jura', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  padding: 1em;
+  color: #fff;
+  background-image: url('images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.content-wrapper {
+  min-width: 800px;
+  max-width: 1200px;
+  display: flex;
+  align-items: flex-start;
+  margin: 50px auto;
+}
+
+#planets {
+  flex: 0 0 300px;
+  margin-right: 50px;
+}
+
+#people {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 30px;
+}
+
+
+.planet {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px 25px;
+  font-size: 20px;
+  line-height: 1;
+  background-color: rgba(0, 0 , 0, 0.75);
+  color: cyan;
+  border: 1px solid cyan;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s;
+}
+
+.planet:hover {
+  transform: scale(1.1);
+  border-color: #ffdd00;
+  color: #ffdd00;
+}
+
+
+.person {
+  padding: 20px;
+  line-height: 1;
+  text-align: center;
+  background-color: rgba(0, 0 , 0, 0.75);
+  color: cyan;
+  border: 1px solid cyan;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.person__icon {
+  font-size: 50px;
+}
+
+.person__name {
+  margin: 20px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.person__info {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.2;
+}
